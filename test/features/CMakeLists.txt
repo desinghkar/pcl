@@ -6,6 +6,10 @@ PCL_ADD_TEST(feature_base test_base_feature
              FILES test_base_feature.cpp
              LINK_WITH pcl_gtest pcl_features pcl_io
              ARGUMENTS "${PCL_SOURCE_DIR}/test/bun0.pcd")
+PCL_ADD_TEST(feature_colorh_estimation test_colorh_estimation
+             FILES test_colorh_estimation.cpp
+             LINK_WITH pcl_gtest pcl_features pcl_io
+             ARGUMENTS "${PCL_SOURCE_DIR}/test/milk_color.pcd")
 PCL_ADD_TEST(feature_cppf_estimation test_cppf_estimation
              FILES test_cppf_estimation.cpp
              LINK_WITH pcl_gtest pcl_features pcl_io
@@ -43,14 +47,6 @@ PCL_ADD_TEST(feature_curvatures_estimation test_curvatures_estimation
 PCL_ADD_TEST(feature_spin_estimation test_spin_estimation
              FILES test_spin_estimation.cpp
              LINK_WITH pcl_gtest pcl_features pcl_io
-             ARGUMENTS "${PCL_SOURCE_DIR}/test/bun0.pcd")
-PCL_ADD_TEST(feature_rsd_estimation test_rsd_estimation
-             FILES test_rsd_estimation.cpp
-             LINK_WITH pcl_gtest pcl_features pcl_io pcl_kdtree
-             ARGUMENTS "${PCL_SOURCE_DIR}/test/bun0.pcd")
-PCL_ADD_TEST(feature_grsd_estimation test_grsd_estimation
-             FILES test_grsd_estimation.cpp
-             LINK_WITH pcl_gtest pcl_features pcl_io pcl_kdtree
              ARGUMENTS "${PCL_SOURCE_DIR}/test/bun0.pcd")
 PCL_ADD_TEST(feature_invariants_estimation test_invariants_estimation
              FILES test_invariants_estimation.cpp
